@@ -8,7 +8,7 @@ import ProjectMid from './ProjectMid'
 import ProjectEnd from './ProjectEnd'
 // 主程式
 function Main() {
-  let domain = '%PUBLIC_URL%/images/'
+  let domain = '/Resume/images/'
   // 切換nav效果in component did mount
   useEffect(() => {
     $('.menu li button').on('click', function () {
@@ -17,7 +17,7 @@ function Main() {
       setRightInfo($(this).text())
     })
   }, [])
-  const [rightInfo, setRightInfo] = useState('Experience')
+  const [rightInfo, setRightInfo] = useState('經歷')
   return (
     <>
       <main>
