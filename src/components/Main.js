@@ -8,7 +8,7 @@ import ProjectMid from './ProjectMid'
 import ProjectEnd from './ProjectEnd'
 // 主程式
 function Main() {
-  let domain = 'http://localhost:3000/images/'
+  let domain = '%PUBLIC_URL%/images/'
   // 切換nav效果in component did mount
   useEffect(() => {
     $('.menu li button').on('click', function () {
