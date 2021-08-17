@@ -5,8 +5,8 @@ function ProjectMid(props) {
   return (
     <>
       <ProjectCommon />
-      <h4>期中-專題後台</h4>
       <div className="middle-part">
+        <h4>期中-專題後台</h4>
         <p>
           本人期中所負責之部分為登入介面、員工管理。
           <br />

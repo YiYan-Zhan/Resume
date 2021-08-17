@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProjectCommon(props) {
   let content = (
-    <div>
+    <div className="project-common">
       <h2>資策會培訓專題-Elfin音樂餐廳</h2>
       <h3>緣由</h3>
       <p>

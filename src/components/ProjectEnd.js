@@ -6,8 +6,8 @@ function ProjectEnd(props) {
   return (
     <>
       <ProjectCommon />
-      <h4>期末-專題前台</h4>
       <div class="final-part">
+        <h4>期末-專題前台</h4>
         <p>
           本人期末前台負責之事項為首頁
           <br />

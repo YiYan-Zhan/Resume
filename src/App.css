@@ -6,28 +6,25 @@
   --teal: #247b7b;
 }
 
-h1 {
-  font-size: 32px;
+h1,
+.h1 {
+  font-size: calc(1rem + 1.25vw);
 }
-
-h2 {
-  font-size: 28px;
+h2,
+.h2 {
+  font-size: calc(1rem + 0.85vw);
 }
-
-h3 {
-  font-size: 24px;
+h3,
+.h3 {
+  font-size: calc(1rem + 0.45vw);
 }
-
-h4 {
-  font-size: 18px;
+h4,
+.h4 {
+  font-size: calc(1rem + 0.2vw);
 }
-
-h5 {
-  font-size: 16px;
-}
-
-p {
-  font-size: 14px;
+p,
+span {
+  font-size: 1rem;
 }
 body {
   color: #333;
@@ -36,6 +33,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding: 5vw; */
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 3vw;
+    height: 100%;
+  }
 }
 
 /* 主要畫面 */
@@ -47,6 +51,12 @@ main {
   height: 90vh;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    /* margin-bottom: 5vh; */
+  }
+}
 /* 左側 */
 .left-info {
   width: 30%;
@@ -54,9 +64,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   color: white;
   font-family: 'noto sans';
+}
+@media screen and (max-width: 768px) {
+  .left-info {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .avatar {
   width: 10vw;
@@ -65,6 +81,13 @@ main {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .avatar {
+    /* margin: 0; */
+    width: 30vw;
+    height: 30vw;
+  }
 }
 .avatar img {
   width: 100%;
@@ -81,8 +104,15 @@ main {
   justify-content: center;
   padding: 0;
 }
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: 0;
+    flex-direction: row;
+  }
+}
 .menu li {
   border: 0.5px solid var(--baby-powder);
+  width: 100%;
   height: 6vh;
 }
 .menu li button {
@@ -98,15 +128,33 @@ main {
   text-align: start;
   padding-left: 1vw;
 }
-
+@media screen and (max-width: 768px) {
+  .menu li button {
+    /* font-size: calc(1rem + 0.2vw); */
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+  }
+}
 .menu li button.active {
   background: var(--cadet-blue);
   border-left: 0.6vw solid var(--baby-powder);
 }
+@media screen and (max-width: 768px) {
+  .menu li button.active {
+    border-left: none;
+    border-bottom: 0.6vw solid var(--midnight-green);
+  }
+}
 .mine {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .mine {
+    justify-content: center;
+  }
 }
 .mine .info {
   display: flex;
@@ -120,10 +168,27 @@ main {
 .info h4 {
   padding-left: 25px;
 }
+@media screen and (max-width: 768px) {
+  .info {
+    width: 50vw;
+  }
+  .info h4 {
+    margin: 2vh;
+  }
+  .info i {
+    width: 20px;
+    height: 20px;
+  }
+}
 .personal-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .personal-info {
+    margin-bottom: 2vh;
+  }
 }
 /* 右側 */
 .right-content {
@@ -131,6 +196,12 @@ main {
   background: var(--baby-powder);
   /* border: 1px solid red; */
   padding: 1vw;
+}
+@media screen and (max-width: 768px) {
+  .right-content {
+    width: 100%;
+    padding: 0;
+  }
 }
 .right-content .content {
   /* border: 1px solid blue; */
@@ -160,6 +231,11 @@ ol li {
   height: 100%;
   padding: 0 1vw 0 1vw;
 }
+@media screen and (max-width: 768px) {
+  .experience {
+    padding: 0 3vw 0 3vw;
+  }
+}
 .education .school-info {
   display: flex;
   flex-direction: row;
@@ -170,10 +246,19 @@ ol li {
   height: 3vw;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .education {
+    padding: 0 2vw 0 2vw;
+  }
+  .education .school-icon {
+    width: 12vw;
+    height: 12vw;
+  }
+}
 .school-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .education .summary {
   padding-left: 3vw;
@@ -192,6 +277,12 @@ p {
 .middle-img {
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .middle-img {
+    width: 80vw;
+    /* height: 58vh; */
+  }
+}
 .middle-img img {
   width: 100%;
   height: 100%;
@@ -200,8 +291,50 @@ p {
 .end-img {
   overflow: hidden;
 }
+
 .end-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .end-img {
+    width: 100%;
+
+    margin: 0;
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .middle-part {
+    padding: 0 2vw 0 2vw;
+  }
+  .project-common {
+    padding: 0 2vw 0 2vw;
+  }
+  .final-part {
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+  }
+  .final-part p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+}
+@media screen and (max-width: 768px) {
+  ol {
+    padding: 0;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+  }
+  .middle-part li {
+    align-items: center;
+  }
 }
