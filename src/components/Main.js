@@ -34,7 +34,7 @@ function Main() {
               </div>
               <div className="info email">
                 <i className="fas fa-envelope"></i>
-                <h4>yiyanzhan0823@gmail.com</h4>
+                <h4 className="email-text">yiyanzhan0823@gmail.com</h4>
               </div>
               <div class="info git">
                 <i class="fab fa-github"></i>

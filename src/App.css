@@ -56,6 +56,9 @@ main {
     flex-direction: column;
     /* margin-bottom: 5vh; */
   }
+  .email-text {
+    font-size: 0.8rem;
+  }
 }
 /* 左側 */
 .left-info {
